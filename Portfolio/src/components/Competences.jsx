@@ -1,4 +1,7 @@
 
 export default function Competences(){
-    return <h1 className="size-44">Competences</h1>
+    return (
+        <h3 className="text-3xl font-bold dark:text-white">Competences</h3>
+        
+    )
 }

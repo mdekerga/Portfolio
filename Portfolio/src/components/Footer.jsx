@@ -51,6 +51,7 @@ export default function Footer(){
             </a>
             </div>
         </nav>
+        <hr className="my-4 border-t-2 border-gray-300" />
         </footer>
     )
 }

@@ -7,14 +7,16 @@ import Formation from './components/Formation'
 
 export default function App(){
   return (
-  <main className="text-gray-400 bg-gray-900 body-font">
-    <Header />
+    <>
+  <Header />
+    <main className="flex flex-col items-center ">
     <Presentation />
     <Formation />
     <Competences />
     <Projets />
     <Footer />
-  </main>
+    </main>
+  </>
   )
 }
 

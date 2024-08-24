@@ -4,27 +4,32 @@ export default function Projets(){
     return (
 
         <section id="projets">
-            <h1 className="size-44">Projets </h1>
-            <div className="card bg-base-100 w-96 shadow-xl">
-                <figure>
-                    <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">
-                    Shoes!
-                    <div className="badge badge-secondary">NEW</div>
-                    </h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
-                    <button href="" className="btn">CODE</button>
+            <h3 className="text-3xl font-bold dark:text-white">Projets </h3>
+            <div className="container flex flex-row justify-between content-between">
+                {projects.map((projet, index) =>(
+                <div key={index} className="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img
+                        src={projet.image}
+                        alt="Shoes" />
+                    </figure>
+                    <div className="card-body">
+                        <h2 className="card-title">
+                        {projet.title}
+                        </h2>
+                        <div className="container flex flex-row">
+                            {projet.technologie.map((techno,index) => 
+                                <div key={index} className="badge badge-outline">{techno}</div>
+                            )}
+                        </div>
+                        <p>{projet.description}</p>
+                        <div className="card-actions justify-end">
+                        <button  className="btn">CODE</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            ))}
+        </div>
         </section>
     )
 }

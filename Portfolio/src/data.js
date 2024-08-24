@@ -4,7 +4,7 @@ export const projects = [
       technologie : ["JS", "HTML/CSS", "POSTGRESQL", "PHP"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./images/project-1.jpg",
+      image: "./images/project-1.png",
       link: "https://reactbootcamp.com",
     },
     {
@@ -12,7 +12,7 @@ export const projects = [
       technologie : ["PYTHON"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./images/project-2.jpg",
+      image: "./images/project-2.png",
       link: "https://github.com/mdekerga/Actu-Finances",
     },
     {
@@ -20,7 +20,7 @@ export const projects = [
       technologie : ["C"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./images/project-3.jpg",
+      image: "./images/project-3.png",
       link: "https://github.com/mdekerga/Puissance4",
     },
     {
