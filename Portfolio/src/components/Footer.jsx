@@ -52,6 +52,9 @@ export default function Footer(){
             </div>
         </nav>
         <hr className="my-4 border-t-2 border-gray-300" />
+        <aside>
+            <p>Copyright © {new Date().getFullYear()} - Mathieu de Kergariou</p>
+        </aside>
         </footer>
     )
 }

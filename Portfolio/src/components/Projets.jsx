@@ -24,7 +24,7 @@ export default function Projets(){
                         </div>
                         <p>{projet.description}</p>
                         <div className="card-actions justify-end">
-                        <button  className="btn">CODE</button>
+                        <a href={projet.link} target="_blank" rel="noopener noreferrer"><button  className="btn">CODE</button></a>
                         </div>
                     </div>
                 </div>

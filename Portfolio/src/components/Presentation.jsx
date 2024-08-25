@@ -3,7 +3,7 @@
 export default function Presentation(){
     return (
     
-    <section id="presentation">
+    <section id="presentation w-screen">
 
         <div className="container flex">
             <div className="avatar">
@@ -11,10 +11,12 @@ export default function Presentation(){
                     <img src="./images/113.jpg" />
                 </div>
                 </div>
-                <p>Bienvenue, je suis</p>
-                <div className="container flex flex-col">
+                
+                <div className="container flex flex-col justify-center">
+                    <p>Bienvenue, je suis</p>
                     <h1 className="text-4xl font-bold">Mathieu de Kergariou</h1>
                     <h2 className="text-2xl font-bold">Développeur</h2>
+                    <a href="./public/files/MATHIEU_DK_CV.pdf" download="Mathieu_DK_CV"><button className="btn">TELECHARGER CV</button></a>
                 </div>
             </div>
         

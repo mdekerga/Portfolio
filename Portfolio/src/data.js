@@ -46,3 +46,11 @@ export const diplomes = [
   },
 
 ]
+
+export const skills = {
+  FrontEnd : ["html","css","js"],
+  BackEnd : ["php","postgresql"],
+  Programmation : ["cpp","java","python"],
+  Framework : ["django","react","laravel"],
+  Autres : ["docker","agile","github"]
+}
