@@ -16,7 +16,10 @@ export default function Presentation(){
                     <p>Bienvenue, je suis</p>
                     <h1 className="text-4xl font-bold">Mathieu de Kergariou</h1>
                     <h2 className="text-2xl font-bold">Développeur</h2>
-                    <a href="./public/files/MATHIEU_DK_CV.pdf" download="Mathieu_DK_CV"><button className="btn">TELECHARGER CV</button></a>
+                    <a href="./public/files/MATHIEU_DK_CV.pdf" download="Mathieu_DK_CV" className="btn">
+                        TELECHARGER CV
+                    </a>
+
                 </div>
             </div>
         

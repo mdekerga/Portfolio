@@ -4,20 +4,20 @@ export default function Projets(){
     return (
 
         <section id="projets">
-            <h3 className="text-3xl font-bold dark:text-white">Projets </h3>
-            <div className="container flex flex-row justify-between content-between">
+            <h2 className="text-3xl font-bold ">Projets </h2>
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9">
                 {projects.map((projet, index) =>(
-                <div key={index} className="card bg-base-100 w-96 shadow-xl">
+                <div key={index} className="p-4 card bg-base-100 w-96 shadow-xl">
                     <figure>
                         <img
                         src={projet.image}
                         alt="Shoes" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">
+                        <h3 className="card-title">
                         {projet.title}
-                        </h2>
-                        <div className="container flex flex-row">
+                        </h3>
+                        <div className="container flex flex-row flex-wrap">
                             {projet.technologie.map((techno,index) => 
                                 <div key={index} className="badge badge-outline">{techno}</div>
                             )}

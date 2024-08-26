@@ -1,7 +1,7 @@
 export const projects = [
     {
       title: "AlhaIZ Breizh",
-      technologie : ["JS", "HTML/CSS", "POSTGRESQL", "PHP"],
+      technologie : ["JS", "HTML/CSS", "POSTGRESQL", "PHP","Agile"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
       image: "./images/project-1.png",
@@ -28,7 +28,7 @@ export const projects = [
       technologie : ["REACT","TAILWIND"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./images/project-4.jpg",
+      image: "./images/project-3.png",
       link: "https://github.com/mdekerga/Portfolio",
     },
   ];
@@ -52,5 +52,5 @@ export const skills = {
   BackEnd : ["php","postgresql"],
   Programmation : ["cpp","java","python"],
   Framework : ["django","react","laravel"],
-  Autres : ["docker","agile","github"]
+  Autres : ["docker","github"]
 }
