@@ -3,8 +3,8 @@ import { projects } from "../data"
 export default function Projets(){
     return (
 
-        <section id="projets">
-            <h2 className="text-3xl font-bold ">Projets </h2>
+        <section id="projets" className="mt-16">
+            <h2 className="text-3xl font-bold mb-6">Projets </h2>
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9">
                 {projects.map((projet, index) =>(
                 <div key={index} className="p-4 card bg-base-100 w-96 shadow-xl">

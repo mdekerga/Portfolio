@@ -1,17 +1,17 @@
 export const projects = [
     {
       title: "AlhaIZ Breizh",
-      technologie : ["JS", "HTML/CSS", "POSTGRESQL", "PHP","Agile"],
+      technologie : ["JS", "HTML/CSS", "POSTGRESQL", "PHP","DOCKER","Agile"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Conception et développement d'une plateforme de location saisonnier pour une association.",
       image: "./images/project-1.png",
       link: "https://reactbootcamp.com",
     },
     {
       title: "Actu Finances",
-      technologie : ["PYTHON"],
+      technologie : ["PYTHON","TKINTER","YFINANCE"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Développement d'un logiciel d'exploitation d'une base de données d'une API pour donner les actualités d'une entreprise.",
       image: "./images/project-2.png",
       link: "https://github.com/mdekerga/Actu-Finances",
     },
@@ -19,7 +19,7 @@ export const projects = [
       title: "Puissance 4",
       technologie : ["C"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Conception d'un jeu de puissance 4 en langage C pour que 2 personnes puissent y jouer.",
       image: "./images/project-3.png",
       link: "https://github.com/mdekerga/Puissance4",
     },
@@ -27,7 +27,7 @@ export const projects = [
       title: "Portfolio",
       technologie : ["REACT","TAILWIND"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Le site sur lequel vous êtes.",
       image: "./images/project-3.png",
       link: "https://github.com/mdekerga/Portfolio",
     },

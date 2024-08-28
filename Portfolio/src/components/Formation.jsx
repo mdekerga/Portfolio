@@ -2,7 +2,7 @@ import { diplomes } from "../data"
 
 export default function Formation(){
     return(
-        <section id="formation">
+        <section id="formation" className="mt-16">
             <h2 className="text-3xl font-bold dark:"> Formation </h2>
 
             {diplomes.map((diplome, index) => (
