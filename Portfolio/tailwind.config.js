@@ -1,5 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+import animations from '@midudev/tailwind-animations'
+
 export default {
+
+  
+
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -53,7 +58,12 @@ export default {
   
     plugins: [
       require('daisyui'),
-      require("@tailwindcss/typography") 
+      require("@tailwindcss/typography"), 
+      animations
+
     ],
+    corePlugins: {
+      preflight: true
+    }
 }
 

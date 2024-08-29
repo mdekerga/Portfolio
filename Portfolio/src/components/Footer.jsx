@@ -3,9 +3,10 @@ export default function Footer(){
         <footer id="footer" className="footer bg-base-300 text-base-content p-10">
         <nav>
             <h6 className="footer-title">NAVIGATION</h6>
-            <a className="link link-hover">PRESENTATION</a>
-            <a className="link link-hover">COMPETENCES</a>
-            <a className="link link-hover">PROJETS</a>
+            <a href="#accueil" className="link link-hover">ACCUEIL</a>
+            <a href="#presentation" className="link link-hover">PRESENTATION</a>
+            <a href="#competences" className="link link-hover">COMPETENCES</a>
+            <a href="#projets" className="link link-hover">PROJETS</a>
         </nav>
         <nav>
             <h6 className="footer-title">CONTACT</h6>
@@ -41,9 +42,7 @@ export default function Footer(){
             </div>
         </nav>
         <hr className="my-4 border-t-2 border-gray-300" />
-        <aside>
             <p>Copyright © {new Date().getFullYear()} - Mathieu de Kergariou</p>
-        </aside>
         </footer>
     )
 }

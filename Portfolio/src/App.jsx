@@ -10,7 +10,7 @@ export default function App(){
   return (
     <>
   <Header />
-    <main className="flex flex-col items-center ">
+    <main className="flex flex-col justify-center items-center ">
     <Accueil />
     <Presentation />
     <Formation />

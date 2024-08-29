@@ -31,18 +31,36 @@ export const projects = [
       image: "./images/project-3.png",
       link: "https://github.com/mdekerga/Portfolio",
     },
+    {
+      title: "Timber",
+      technologie : ["C++","SFML"],
+      description:
+        "Recréation d'un en C++",
+      image: "./images/project-5.jpeg",
+      link: "https://github.com/mdekerga/Timber",
+    },
+    {
+      title: "Application",
+      technologie : ["Kotlin"],
+      description:
+        "Application mobile ",
+      image: "./images/project-3.png",
+      link: "https://github.com/mdekerga/Portfolio",
+    },
   ];
 
 export const diplomes = [
   {
-    date: "2022",
-    ecole: "Baccalauréat Général",
-    lieu: "Lycée-Notre dame du Kreisker"
-  },
-  {
     date: "2022-Présent",
     ecole: "Bachelor Universitaire Technologique Informatique",
-    lieu: "IUT de Lannion"
+    lieu: "IUT de Lannion",
+    logo: "./images/Logo_IUT.png"
+  },
+  {
+    date: "2022",
+    ecole: "Baccalauréat Général",
+    lieu: "Lycée-Notre dame du Kreisker",
+    logo: "./images/lycee.png"
   },
 
 ]
@@ -52,5 +70,5 @@ export const skills = {
   BackEnd : ["php","postgresql"],
   Programmation : ["cpp","java","python"],
   Framework : ["django","react","laravel"],
-  Autres : ["docker","github"]
+  Outils : ["docker","github"]
 }

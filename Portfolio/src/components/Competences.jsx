@@ -1,9 +1,43 @@
 import { skills } from "../data.js"
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Competences() {
-  return (
-    <section id="competences" className="py-8">
-      <h2 className="text-3xl font-bold  mb-6">Competences</h2>
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+      const observer = new IntersectionObserver(
+      (entries) => {
+          const [entry] = entries;
+          if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(sectionRef.current); // Stop observing after it becomes visible
+          }
+      },
+      {
+          threshold: 0.5
+          , // Trigger when 10% of the section is visible
+      }
+      );
+
+      if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+      }
+
+      return () => {
+      if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+      }
+      };
+  }, []);
+  return (    
+    <section id="competences" 
+    ref={sectionRef} 
+    className={`py-8 flex flex-col items-center mt-24 mb-24 ${
+      isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
+    }`} 
+    >
+      <h2 className="text-4xl font-bold  mb-6">Competences</h2>
       
       <div className="container mt-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Object.entries(skills).map(([key, value]) => (
