@@ -35,17 +35,9 @@ export const projects = [
       title: "Timber",
       technologie : ["C++","SFML"],
       description:
-        "Recréation d'un en C++",
+        "Recréation d'un jeu dans lequel il faut couper un arbre et esquiver les branches en C++",
       image: "./images/project-5.jpeg",
       link: "https://github.com/mdekerga/Timber",
-    },
-    {
-      title: "Application",
-      technologie : ["Kotlin"],
-      description:
-        "Application mobile ",
-      image: "./images/project-3.png",
-      link: "https://github.com/mdekerga/Portfolio",
     },
   ];
 

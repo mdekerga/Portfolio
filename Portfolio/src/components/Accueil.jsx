@@ -13,7 +13,7 @@ export default function Accueil(){
                 TELECHARGER CV
             </a>
         </div>
-        <a href="#header" className="btn fixed right-12 bottom-8 text-xl z-10">↑</a>
+        <a href="#header" className="btn fixed right-12 bottom-8 text-xl z-10 bg-rose-800 text-black">↑</a>
     </section>
     )
 }
