@@ -11,7 +11,7 @@ export const projects = [
       title: "Actu Finances",
       technologie : ["PYTHON","TKINTER","YFINANCE"],
       description:
-        "Développement d'un logiciel d'exploitation d'une base de données d'une API pour donner les actualités d'une entreprise.",
+        "Développement d'un logiciel d'exploitation d'une base de données d'une API pour donner les actualités d'une entreprise.  ",
       image: "./images/project-2.png",
       link: "https://github.com/mdekerga/Actu-Finances",
     },
