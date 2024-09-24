@@ -5,7 +5,7 @@ export const projects = [
       description:
         "Conception et développement d'une plateforme de location saisonnier pour une association.",
       image: "./images/project-1.png",
-      link: "https://reactbootcamp.com",
+      link: "https://github.com/mdekerga/KOH_Sport",
     },
     {
       title: "Actu Finances",
@@ -28,7 +28,7 @@ export const projects = [
       technologie : ["REACT","TAILWIND"],
       description:
         "Le site sur lequel vous êtes.",
-      image: "./images/project-3.png",
+      image: "./images/project-4.png",
       link: "https://github.com/mdekerga/Portfolio",
     },
     {

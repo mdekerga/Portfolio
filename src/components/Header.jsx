@@ -2,7 +2,7 @@
 export default function Header(){
     return (
         <header id="header">
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 z-10 fixed ">
                 <div className="flex-1">
                         <a className="text-xl">MDK</a>
                     </div>
