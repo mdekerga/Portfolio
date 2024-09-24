@@ -11,7 +11,6 @@ export default function Header(){
                             <li><a href="#competences">COMPETENCES</a></li>
                             <li><a href="#projets">PROJETS</a></li>
                             <li><a href="#footer">CONTACT</a></li>
-                            <li><a href="#">TEST</a></li>
                         </ul>
                     </div>
                 </div>
