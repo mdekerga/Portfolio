@@ -9,7 +9,7 @@ export default function Accueil(){
             <h1 className="text-4xl font-bold mb-4">Mathieu de Kergariou</h1>
             <h2 className="text-2xl font-bold">Développeur </h2>
             <h3 className="text-xl">(Web - Mobile - Jeux)</h3>
-            <a href="./public/files/MATHIEUDKCV.pdf" download="MATHIEUDKCV.pdf" className="btn mt-12">
+            <a href="./public/files/MATHIEU_DK_CV.pdf" download="CV.pdf" className="btn mt-12">
                 TELECHARGER CV
             </a>
         </div>
