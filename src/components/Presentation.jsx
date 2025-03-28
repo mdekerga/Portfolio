@@ -34,7 +34,7 @@ export default function Presentation() {
     <section
       id="presentation"
       ref={sectionRef}
-      className={`mt-24 mb-24 flex flex-col items-center transition-opacity duration-1000 ${
+      className={`mb-24 flex flex-col items-center transition-opacity duration-1000 ${
         isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
       }`}
     >
