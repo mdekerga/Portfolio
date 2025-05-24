@@ -5,6 +5,7 @@ import Presentation from './components/Presentation'
 import Projets from './components/Projets'
 import Formation from './components/Formation'
 import Accueil from './components/Accueil'
+import Experiences from './components/Experiences'
 
 export default function App(){
   return (
@@ -14,6 +15,7 @@ export default function App(){
     <Accueil />
     <Presentation />
     <Formation />
+    <Experiences />
     <Competences />
     <Projets />
     <Footer />

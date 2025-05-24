@@ -57,8 +57,19 @@ export const diplomes = [
 
 ]
 
+export const experiences = [
+  {
+    dateDebut: "04/25",
+    dateFin: "05/25",
+    emploi: "Stage Développeur Front",
+    entreprise: "Brittany Ferries",
+    lieu: "Roscoff",
+    logo: "./images/bf.png"
+  },
+]
+
 export const skills = {
-  FrontEnd : ["html","css","js"],
+  FrontEnd : ["html","css"],
   BackEnd : ["php","postgresql"],
   Programmation : ["cpp","java","python"],
   Framework : ["django","react","laravel"],
