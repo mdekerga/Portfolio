@@ -37,11 +37,11 @@ export default function Competences() {
       isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
     }`} 
     >
-      <h2 className="text-4xl font-bold  mb-6">Competences</h2>
+      <h2 className="text-primary text-4xl font-bold  mb-6">Competences</h2>
       
       <div className="container mt-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Object.entries(skills).map(([key, value]) => (
-          <div className="p-4 shadow-lg rounded-lg"key={key}>
+          <div className="text-primary p-4 shadow-lg rounded-lg"key={key}>
             <h3 className="text-2xl font-bold  mb-4">{key}</h3>
             <div className="flex flex-wrap gap-4">
               {value.map(skill => (

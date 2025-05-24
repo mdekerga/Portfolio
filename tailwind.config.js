@@ -3,19 +3,24 @@ import animations from '@midudev/tailwind-animations'
 
 export default {
 
-  
-
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+theme:{
+  extend: {
+  colors: {
+    'base-content-light': '#FF9E9E', 
+  },
+},
+},
 
   daisyui:
   {
     themes: [
       {
         'luxury': {
-           'primary' : '#ffffff',
+           'primary' : '#f55f5f', 
            'primary-focus' : '#e6e6e6',
            'primary-content' : '#000000',
 
@@ -35,6 +40,7 @@ export default {
            'base-200' : '#171618',
            'base-300' : '#0d0d0d',
            'base-content' : '#dc4c4c',
+           'base-content-light': '#FF9E9E',
 
            'info' : '#66c7ff',
            'success' : '#87cf3a',

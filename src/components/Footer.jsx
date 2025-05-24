@@ -2,20 +2,20 @@ export default function Footer(){
     return (
         <footer id="footer" className="footer bg-base-300 text-base-content p-10">
         <nav>
-            <h6 className="footer-title">NAVIGATION</h6>
-            <a href="#accueil" className="link link-hover">ACCUEIL</a>
-            <a href="#presentation" className="link link-hover">PRESENTATION</a>
-            <a href="#competences" className="link link-hover">COMPETENCES</a>
-            <a href="#projets" className="link link-hover">PROJETS</a>
+            <h6 className="text-base-content-dark footer-title">NAVIGATION</h6>
+            <a href="#accueil" className="text-primary link link-hover">ACCUEIL</a>
+            <a href="#presentation" className="text-primary link link-hover">PRESENTATION</a>
+            <a href="#competences" className="text-primary link link-hover">COMPETENCES</a>
+            <a href="#projets" className="text-primary link link-hover">PROJETS</a>
         </nav>
         <nav>
-            <h6 className="footer-title">CONTACT</h6>
-            <a className="link link-hover">29670 Henvic</a>
-            <a className="link link-hover">mathieu.dkrg@gmail.com</a>
-            <a className="link link-hover">06 47 49 31 44</a>
+            <h6 className="text-base-content-dark footer-title">CONTACT</h6>
+            <a className="text-primary link link-hover">29670 Henvic</a>
+            <a className="text-primary link link-hover">mathieu.dkrg@gmail.com</a>
+            <a className="text-primary link link-hover">06 47 49 31 44</a>
         </nav>
         <nav>
-            <h6 className="footer-title">SOCIAL</h6>
+            <h6 className="text-base-content-dark footer-title">SOCIAL</h6>
             <div className="grid grid-flow-col gap-4">
             <a href="https://www.linkedin.com/in/mathieu-de-kergariou-a9511a26a/" target="_blank" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" className="fill-current" viewBox="0 5 1036 990">

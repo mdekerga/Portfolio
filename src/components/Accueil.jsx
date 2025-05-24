@@ -5,11 +5,11 @@ export default function Accueil(){
     
     <section id="accueil" className="mt-36 mb-52">
         <div className="container flex flex-col justify-center items-center animate-fade-in-down">
-            <p className="text-lg  mb-4">Bienvenue, je suis</p>
-            <h1 className="text-4xl font-bold mb-4">Mathieu de Kergariou</h1>
-            <h2 className="text-2xl font-bold">Développeur </h2>
-            <h3 className="text-xl">(Web - Mobile - Jeux)</h3>
-            <a href="/files/MathieuDKCV.pdf" download="CV.pdf" className="btn mt-12">
+            <p className="text-primary text-lg mb-4">Bienvenue, je suis</p>
+            <h1 className="text-primary text-4xl font-bold mb-4">Mathieu de Kergariou</h1>
+            <h2 className="text-primary text-2xl font-bold">Développeur </h2>
+            <h3 className="text-primary text-xl">(Web - Mobile - Jeux)</h3>
+            <a href="/files/MathieuDKCV.pdf" download="CV.pdf" className="btn btn-primary mt-12">
                 TELECHARGER MON CV
             </a>
         </div>

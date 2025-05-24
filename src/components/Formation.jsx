@@ -38,12 +38,12 @@ export default function Formation(){
         isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
       }`}
       >
-            <h2 className="text-4xl font-bold mb-6"> Formation </h2>
+            <h2 className="text-primary text-4xl font-bold mb-6"> Formation </h2>
 
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className="flex-grow">
                     {diplomes.map((diplome, index) => (
-                    <div className="mb-16 mt-16" key={index}>
+                    <div className="text-primary mb-16 mt-16" key={index}>
                         <div className="flex items-center">
                         <img className="w-16 h-16 mr-4" src={diplome.logo} alt="Logo" />
                         <div>

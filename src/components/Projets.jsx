@@ -38,7 +38,7 @@ export default function Projets() {
         isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
       }`}
     >
-      <h2 className="text-4xl font-bold mb-6">Projets</h2>
+      <h2 className="text-primary text-4xl font-bold mb-6">Projets</h2>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9">
         {projects.map((projet, index) => (
           <div key={index} className="p-4 card bg-base-100 w-96 shadow-xl">
@@ -46,22 +46,22 @@ export default function Projets() {
               <img src={projet.image} alt={projet.title} className="w-96 h-80" />
             </figure>
             <div className="card-body">
-              <h3 className="card-title">{projet.title}</h3>
+              <h3 className="text-primary card-title">{projet.title}</h3>
               <div className="container flex flex-row flex-wrap">
                 {projet.technologie.map((techno, index) => (
-                  <div key={index} className="badge badge-outline">
+                  <div key={index} className="text-primary badge badge-outline">
                     {techno}
                   </div>
                 ))}
               </div>
-              <p>{projet.description}</p>
+              <p className="text-primary">{projet.description}</p>
               <div className="card-actions justify-end">
                 <a
                   href={projet.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="btn">CODE</button>
+                  <button className="btn btn-primary">CODE</button>
                 </a>
               </div>
             </div>
