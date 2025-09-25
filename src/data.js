@@ -63,7 +63,9 @@ export const experiences = [
     dateFin: "05/25",
     emploi: "Stage Développeur Front",
     entreprise: "Brittany Ferries",
+    description:"Conception et développement d’un outil d’analyse de l’accessibilité des applications internes de l’entreprise.",
     lieu: "Roscoff",
+    technologie: ["node","typescript","playwright"],
     logo: "./images/bf.png"
   },
 ]
