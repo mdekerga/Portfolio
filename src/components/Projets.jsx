@@ -1,9 +1,40 @@
 import React, { useEffect, useRef, useState } from "react";
 import { projects } from "../data";
 
+function showProjects(projectsToShow) {
+  return projectsToShow.map((projet, index) => (
+    <div key={index} className="p-4 card bg-base-100 w-96 shadow-xl">
+      <figure>
+        <img src={projet.image} alt={projet.title} className="w-96 h-80" />
+      </figure>
+      <div className="card-body">
+        <h3 className="text-primary card-title">{projet.title}</h3>
+        <div className="container flex flex-row flex-wrap">
+          {projet.technologie.map((techno, idx) => (
+            <div key={idx} className="text-primary badge badge-outline">
+              {techno}
+            </div>
+          ))}
+        </div>
+        <p className="text-primary">{projet.description}</p>
+        <div className="card-actions justify-end">
+          <a href={projet.link} target="_blank" rel="noopener noreferrer">
+            <button className="btn btn-primary">CODE</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  ));
+}
+
 export default function Projets() {
   const [isVisible, setIsVisible] = useState(false);
+  const [filteredProjects, setFilteredProjects] = useState(projects);
   const sectionRef = useRef(null);
+
+  // Example filters, replace with your actual filter logic
+  const universitaire = projects.filter((project) => project.universitaire);
+  const personnel = projects.filter((project) => !project.universitaire);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,34 +70,31 @@ export default function Projets() {
       }`}
     >
       <h2 className="text-primary text-4xl font-bold mb-6">Projets</h2>
+      <div className="mb-6 flex flex-row">
+        <button
+          type="button"
+          className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+          onClick={() => setFilteredProjects(projects)}
+        >
+          TOUT
+        </button>
+        <button
+          type="button"
+          className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+          onClick={() => setFilteredProjects(universitaire)}
+        >
+          UNIVERSITAIRE
+        </button>
+        <button
+          type="button"
+          className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+          onClick={() => setFilteredProjects(personnel)}
+        >
+          PERSONNEL
+        </button>
+      </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9">
-        {projects.map((projet, index) => (
-          <div key={index} className="p-4 card bg-base-100 w-96 shadow-xl">
-            <figure>
-              <img src={projet.image} alt={projet.title} className="w-96 h-80" />
-            </figure>
-            <div className="card-body">
-              <h3 className="text-primary card-title">{projet.title}</h3>
-              <div className="container flex flex-row flex-wrap">
-                {projet.technologie.map((techno, index) => (
-                  <div key={index} className="text-primary badge badge-outline">
-                    {techno}
-                  </div>
-                ))}
-              </div>
-              <p className="text-primary">{projet.description}</p>
-              <div className="card-actions justify-end">
-                <a
-                  href={projet.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="btn btn-primary">CODE</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
+        {showProjects(filteredProjects)}
       </div>
     </section>
   );

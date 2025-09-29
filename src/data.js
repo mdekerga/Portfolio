@@ -6,6 +6,7 @@ export const projects = [
       "Conception et développement d'une plateforme de location saisonnier pour une association.",
     image: "./images/project-1.png",
     link: "https://github.com/mdekerga/KOH_Sport",
+    universitaire: true,
   },
   {
     title: "Actu Finances",
@@ -14,6 +15,7 @@ export const projects = [
       "Développement d'un logiciel d'exploitation d'une base de données d'une API pour donner les actualités d'une entreprise.  ",
     image: "./images/project-2.png",
     link: "https://github.com/mdekerga/Actu-Finances",
+    universitaire: false,
   },
   {
     title: "Puissance 4",
@@ -22,6 +24,7 @@ export const projects = [
       "Conception d'un jeu de puissance 4 en langage C pour que 2 personnes puissent y jouer.",
     image: "./images/project-3.png",
     link: "https://github.com/mdekerga/Puissance4",
+    universitaire: true,
   },
   {
     title: "Portfolio",
@@ -29,6 +32,7 @@ export const projects = [
     description: "Le site sur lequel vous êtes.",
     image: "./images/project-4.png",
     link: "https://github.com/mdekerga/Portfolio",
+    universitaire: false,
   },
   {
     title: "Timber",
@@ -37,6 +41,16 @@ export const projects = [
       "Recréation d'un jeu dans lequel il faut couper un arbre et esquiver les branches en C++",
     image: "./images/project-5.jpeg",
     link: "https://github.com/mdekerga/Timber",
+    universitaire: false,
+  },
+  {
+    title: "Kelfilm",
+    technologie: ["Angular"],
+    description:
+      "Recréation d'un jeu dans lequel il faut couper un arbre et esquiver les branches en C++",
+    image: "./images/project-5.jpeg",
+    link: "https://github.com/mdekerga/kelfilm",
+    universitaire: false,
   },
 ];
 
