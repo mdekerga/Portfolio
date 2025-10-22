@@ -9,13 +9,22 @@ export const projects = [
     universitaire: true,
   },
   {
+    title: "Pokedex",
+    technologie: ["HTML", "CSS", "JAVASCRIPT"],
+    description: "Pokédex utilisant du Javascript, HTML et CSS",
+    image: "./images/pokedex.png",
+    link: "https://github.com/mdekerga/Pokedex-JS",
+    universitaire: true,
+  },
+
+  {
     title: "Actu Finances",
     technologie: ["PYTHON", "TKINTER", "YFINANCE"],
     description:
       "Développement d'un logiciel d'exploitation d'une base de données d'une API pour donner les actualités d'une entreprise.  ",
     image: "./images/project-2.png",
     link: "https://github.com/mdekerga/Actu-Finances",
-    universitaire: false,
+    universitaire: true,
   },
   {
     title: "Puissance 4",
@@ -46,9 +55,8 @@ export const projects = [
   {
     title: "Kelfilm",
     technologie: ["Angular"],
-    description:
-      "Recréation d'un jeu dans lequel il faut couper un arbre et esquiver les branches en C++",
-    image: "./images/project-5.jpeg",
+    description: "",
+    image: "./images/kelfilm.png",
     link: "https://github.com/mdekerga/kelfilm",
     universitaire: false,
   },
