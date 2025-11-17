@@ -9,6 +9,15 @@ export const projects = [
     universitaire: true,
   },
   {
+    title: "Système de recommandation de musique",
+    technologie: ["POSTGRESQL", "PYTHON", "IA"],
+    description:
+      "Conception et développement d'une plateforme de location saisonnier pour une association.",
+    image: "./images/project-1.png",
+    link: "https://github.com/mdekerga/",
+    universitaire: true,
+  },
+  {
     title: "Pokedex",
     technologie: ["HTML", "CSS", "JAVASCRIPT"],
     description: "Pokédex utilisant du Javascript, HTML et CSS",
