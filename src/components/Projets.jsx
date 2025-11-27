@@ -3,9 +3,9 @@ import { projects } from "../data";
 
 function showProjects(projectsToShow) {
   return projectsToShow.map((projet, index) => (
-    <div key={index} className="p-4 card bg-base-100 w-96 shadow-xl">
+    <div key={index} className="p-4 card bg-base-100 w-100 shadow-xl">
       <figure>
-        <img src={projet.image} alt={projet.title} className="w-96 h-80" />
+        <img src={projet.image} alt={projet.title} className="w-100 h-80" />
       </figure>
       <div className="card-body">
         <h3 className="text-primary card-title">{projet.title}</h3>

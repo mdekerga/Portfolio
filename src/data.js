@@ -13,7 +13,7 @@ export const projects = [
     technologie: ["POSTGRESQL", "PYTHON", "IA"],
     description:
       "Conception et développement d'une plateforme de location saisonnier pour une association.",
-    image: "./images/project-1.png",
+    image: "./images/muse.png",
     link: "https://github.com/mdekerga/",
     universitaire: true,
   },
