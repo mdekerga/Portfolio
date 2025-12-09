@@ -11,11 +11,11 @@ export default function Experiences() {
         const [entry] = entries;
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(sectionRef.current); // Stop observing after it becomes visible
+          observer.unobserve(sectionRef.current); 
         }
       },
       {
-        threshold: 0.5, // Trigger when 10% of the section is visible
+        threshold: 0.5, 
       }
     );
 

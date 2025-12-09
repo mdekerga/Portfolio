@@ -100,6 +100,33 @@ export const experiences = [
   },
 ];
 
+export const skillsBUT = [
+  {
+    Titre: "Compétence 1",
+    label: "Réaliser",
+  },
+  {
+    Titre: "Compétence 2",
+    label: "Optimiser",
+  },
+  {
+    Titre: "Compétence 3",
+    label: "Administrer",
+  },
+  {
+    Titre: "Compétence 4",
+    label: "Gérer",
+  },
+  {
+    Titre: "Compétence 5",
+    label: "Cnduire",
+  },
+  {
+    Titre: "Compétence 6",
+    label: "Collaborer",
+  },
+];
+
 export const skills = {
   FrontEnd: ["html", "css", "javascript"],
   BackEnd: ["php", "postgresql", "mongodb"],
