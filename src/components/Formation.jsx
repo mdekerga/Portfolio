@@ -45,7 +45,7 @@ export default function Formation(){
                     {diplomes.map((diplome, index) => (
                     <div className="text-primary mb-16 mt-16" key={index}>
                         <div className="flex items-center">
-                        <img className="w-16 h-16 mr-4" src={diplome.logo} alt="Logo" />
+                        <img className="w-32 h-32 mr-4" src={diplome.logo} alt="Logo" />
                         <div>
                             <h4 className="font-bold text-lg">{diplome.date}</h4>
                             <h4 className="font-bold text-lg">{diplome.ecole}</h4>
