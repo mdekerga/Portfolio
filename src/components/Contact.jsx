@@ -34,7 +34,8 @@ export default function Contact() {
     const errs = {};
     if (!values.name.trim()) errs.name = "Nom requis";
     if (!values.email.trim()) errs.email = "Email requis";
-    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(values.email)) errs.email = "Email invalide";
+    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(values.email))
+      errs.email = "Email invalide";
     if (!values.message.trim()) errs.message = "Message requis";
     return errs;
   }
@@ -57,12 +58,19 @@ export default function Contact() {
         const resp = await fetch(FORMSPREE_ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name: form.name, email: form.email, message: form.message, _replyto: form.email }),
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            message: form.message,
+            _replyto: form.email,
+          }),
         });
 
         if (!resp.ok) {
           const data = await resp.json().catch(() => null);
-          setErrors({ form: data?.error || "Erreur lors de l'envoi, réessayez." });
+          setErrors({
+            form: data?.error || "Erreur lors de l'envoi, réessayez.",
+          });
         } else {
           setSuccess(true);
           setForm({ name: "", email: "", message: "" });
@@ -99,16 +107,24 @@ export default function Contact() {
       <h2 className="text-primary text-4xl font-bold mb-6">Contact</h2>
 
       <div className="container mx-auto w-full">
-        <form onSubmit={handleSubmit} className="card bg-base-100 shadow-xl p-6">
+        <form
+          onSubmit={handleSubmit}
+          className="card bg-base-100 shadow-xl p-6"
+        >
           {!FORMSPREE_ENDPOINT && (
-            <div className="mb-4 text-sm text-neutral">Formulaire en mode simulation — configurez VITE_FORMSPREE_ENDPOINT pour l’envoi réel.</div>
+            <div className="mb-4 text-sm text-neutral">
+              Formulaire en mode simulation — configurez VITE_FORMSPREE_ENDPOINT
+              pour l’envoi réel.
+            </div>
           )}
           {errors.form && (
             <div className="alert alert-error mb-4">{errors.form}</div>
           )}
 
           {success && (
-            <div className="alert alert-success mb-4">Message envoyé avec succès !</div>
+            <div className="alert alert-success mb-4">
+              Message envoyé avec succès !
+            </div>
           )}
 
           <div className="grid grid-cols-1 gap-4">
@@ -120,11 +136,15 @@ export default function Contact() {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                className={`input input-bordered w-96 ${errors.name ? "input-error" : ""}`}
+                className={`input input-bordered w-96 ${
+                  errors.name ? "input-error" : ""
+                }`}
                 type="text"
                 placeholder="Votre nom"
               />
-              {errors.name && <span className="text-error text-sm">{errors.name}</span>}
+              {errors.name && (
+                <span className="text-error text-sm">{errors.name}</span>
+              )}
             </div>
 
             <div>
@@ -136,10 +156,14 @@ export default function Contact() {
                 type="email"
                 value={form.email}
                 onChange={handleChange}
-                className={`input input-bordered w-96 ${errors.email ? "input-error" : ""}`}
+                className={`input input-bordered w-96 ${
+                  errors.email ? "input-error" : ""
+                }`}
                 placeholder="votre@email.com"
               />
-              {errors.email && <span className="text-error text-sm">{errors.email}</span>}
+              {errors.email && (
+                <span className="text-error text-sm">{errors.email}</span>
+              )}
             </div>
 
             <div>
@@ -150,15 +174,23 @@ export default function Contact() {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                className={`textarea textarea-bordered w-96 ${errors.message ? "textarea-error" : ""}`}
+                className={`textarea textarea-bordered w-96 ${
+                  errors.message ? "textarea-error" : ""
+                }`}
                 rows={6}
                 placeholder="Votre message..."
               />
-              {errors.message && <span className="text-error text-sm">{errors.message}</span>}
+              {errors.message && (
+                <span className="text-error text-sm">{errors.message}</span>
+              )}
             </div>
 
             <div className="flex items-center justify-end mt-2">
-              <button className={`btn btn-primary ${submitting ? "loading" : ""}`} type="submit" disabled={submitting}>
+              <button
+                className={`btn btn-primary ${submitting ? "loading" : ""}`}
+                type="submit"
+                disabled={submitting}
+              >
                 {submitting ? "Envoi..." : "Envoyer"}
               </button>
             </div>

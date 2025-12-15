@@ -18,7 +18,7 @@ export default function Accueil() {
       </div>
       <a
         href="#header"
-        className="btn fixed right-12 bottom-8 text-xl z-10 bg-rose-800 text-black"
+        className="btn fixed right-12 bottom-8 text-xl z-10 bg-white text-black"
       >
         ↑
       </a>

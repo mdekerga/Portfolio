@@ -11,11 +11,11 @@ export default function Experiences() {
         const [entry] = entries;
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(sectionRef.current); 
+          observer.unobserve(sectionRef.current);
         }
       },
       {
-        threshold: 0.5, 
+        threshold: 0.5,
       }
     );
 
@@ -51,7 +51,9 @@ export default function Experiences() {
                   alt="Logo"
                 />
                 <div>
-                  <h4 className="font-bold text-lg">{experience.dateDebut} - {experience.dateFin}</h4>
+                  <h4 className="font-bold text-lg">
+                    {experience.dateDebut} - {experience.dateFin}
+                  </h4>
                   <h4 className="font-bold text-lg">{experience.emploi}</h4>
                   <h4 className="font-bold text-lg">{experience.entreprise}</h4>
                   <p className="text-lg ">{experience.lieu}</p>

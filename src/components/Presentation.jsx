@@ -14,8 +14,7 @@ export default function Presentation() {
         }
       },
       {
-        threshold: 0.5
-        , // Trigger when 10% of the section is visible
+        threshold: 0.5, // Trigger when 10% of the section is visible
       }
     );
 
@@ -48,11 +47,19 @@ export default function Presentation() {
 
         <div className="flex flex-col justify-center">
           <p className="text-primary text-lg ml-6 max-w-prose">
-            Bienvenue dans le portfolio d'un développeur passionné et expérimenté ! Je suis un développeur polyvalent avec une passion profonde pour la création d'applications innovantes et fonctionnelles. Mon expertise s'étend à plusieurs langages de programmation tels que Java, Python et C.
+            Bienvenue dans le portfolio d'un développeur passionné et
+            expérimenté ! Je suis un développeur polyvalent avec une passion
+            profonde pour la création d'applications innovantes et
+            fonctionnelles. Mon expertise s'étend à plusieurs langages de
+            programmation tels que Java, Python et C.
           </p>
           <br />
           <p className="text-primary text-lg ml-6 max-w-prose">
-            Mon objectif est de concevoir des solutions logicielles robustes et élégantes, en mettant l'accent sur l'expérience utilisateur et la performance. Explorez mon portfolio pour découvrir mes projets précédents et voir comment j'ai contribué à créer des produits de haute qualité.
+            Mon objectif est de concevoir des solutions logicielles robustes et
+            élégantes, en mettant l'accent sur l'expérience utilisateur et la
+            performance. Explorez mon portfolio pour découvrir mes projets
+            précédents et voir comment j'ai contribué à créer des produits de
+            haute qualité.
           </p>
         </div>
       </div>

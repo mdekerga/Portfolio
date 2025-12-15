@@ -77,12 +77,18 @@ export const diplomes = [
     ecole: "Bachelor Universitaire Technologique Informatique",
     lieu: "IUT de Lannion",
     logo: "./images/Logo_IUT.png",
+    description:
+      "Parcours Réalisation d'Applications. Apprentissage du cycle complet de développement : de la conception (UML, Base de données) au déploiement, en passant par le développement Fullstack et la gestion de projet Agile.",
+    skills: ["Java", "React", "SQL", "Scrum", "CI/CD"],
   },
   {
     date: "2022",
     ecole: "Baccalauréat Général",
     lieu: "Lycée-Notre dame du Kreisker",
     logo: "./images/lycee.png",
+    description:
+      "Spécialités Mathématiques et Numérique & Sciences Informatiques (NSI). Obtention avec Mention Assez Bien.",
+    skills: ["Python", "Algorithmique", "Logique"],
   },
 ];
 
@@ -128,9 +134,9 @@ export const skillsBUT = [
 ];
 
 export const skills = {
-  FrontEnd: ["html", "css", "javascript"],
-  BackEnd: ["php", "postgresql", "mongodb"],
-  Programmation: ["cpp", "java", "python"],
-  Framework: ["django", "react", "laravel", "spring"],
-  Environnement: ["vsc", "docker", "github"],
+  FRONTEND: ["HTML", "CSS", "JAVASCRIPT"],
+  BACKEND: ["PHP", "POSTGRESQL", "MONGODB"],
+  PROGRAMMATION: ["C++", "JAVA", "PYTHON"],
+  FRAMEWORK: ["DJANGO", "REACT", "LARAVEL", "SPRING"],
+  OUTILS: ["VSC", "DOCKER", "GITHUB"],
 };

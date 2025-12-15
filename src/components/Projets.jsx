@@ -5,7 +5,7 @@ export default function Projets() {
   const [isVisible, setIsVisible] = useState(false);
 
   const [selectedProject, setSelectedProject] = useState(null);
-  
+
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const sectionRef = useRef(null);
 
@@ -29,7 +29,6 @@ export default function Projets() {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
-
 
   const closeDetails = () => {
     setSelectedProject(null);
@@ -71,12 +70,15 @@ export default function Projets() {
         {filteredProjects.map((projet, index) => (
           <div
             key={index}
-
             onClick={() => setSelectedProject(projet)}
             className="p-4 card bg-base-100 w-100 shadow-xl cursor-pointer hover:scale-105 transition-transform duration-200"
           >
             <figure>
-              <img src={projet.image} alt={projet.title} className="w-full h-80 object-cover" />
+              <img
+                src={projet.image}
+                alt={projet.title}
+                className="w-full h-80 object-cover"
+              />
             </figure>
             <div className="card-body">
               <h3 className="text-primary card-title">{projet.title}</h3>
@@ -96,42 +98,51 @@ export default function Projets() {
       {selectedProject && (
         <dialog className="modal modal-open">
           <div className="modal-box w-11/12 max-w-5xl">
-            <button 
-                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" 
-                onClick={closeDetails}
+            <button
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              onClick={closeDetails}
             >
-                ✕
+              ✕
             </button>
-            
-            <h3 className="font-bold text-2xl mb-4 text-primary">{selectedProject.title}</h3>
-            
+
+            <h3 className="font-bold text-2xl mb-4 text-primary">
+              {selectedProject.title}
+            </h3>
+
             <div className="flex flex-col lg:flex-row gap-6">
-                <img 
-                    src={selectedProject.image} 
-                    alt={selectedProject.title} 
-                    className="rounded-xl lg:w-1/2 object-cover max-h-[400px]"
-                />
-                
-                <div className="flex flex-col gap-4">
-                    <div className="flex flex-wrap gap-2">
-                        {selectedProject.technologie.map((techno, idx) => (
-                        <div key={idx} className="badge badge-primary">
-                            {techno}
-                        </div>
-                        ))}
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="rounded-xl lg:w-1/2 object-cover max-h-[400px]"
+              />
+
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technologie.map((techno, idx) => (
+                    <div key={idx} className="badge badge-primary">
+                      {techno}
                     </div>
-                    
-                    <p className="py-4 text-lg">{selectedProject.description}</p>
+                  ))}
                 </div>
+
+                <p className="py-4 text-lg">{selectedProject.description}</p>
+              </div>
             </div>
 
             <div className="modal-action">
               {selectedProject.link && (
-                  <a href={selectedProject.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                    Voir le Code / Site
-                  </a>
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Voir le Code / Site
+                </a>
               )}
-              <button className="btn" onClick={closeDetails}>Fermer</button>
+              <button className="btn" onClick={closeDetails}>
+                Fermer
+              </button>
             </div>
           </div>
           <form method="dialog" className="modal-backdrop">
