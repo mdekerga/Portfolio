@@ -58,6 +58,16 @@ export default function Experiences() {
                   <h4 className="font-bold text-lg">{experience.entreprise}</h4>
                   <p className="text-lg ">{experience.lieu}</p>
                   <p className="text-lg">{experience.description}</p>
+                  <ul className="list-disc">
+                    {experience.taches.map((tache, id) => (
+                      <li>{tache}</li>
+                    ))}
+                  </ul>
+                  {experience.technologie.map((techno, id) => (
+                    <div key={id} className="badge badge-outline badge-primary">
+                      {techno}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

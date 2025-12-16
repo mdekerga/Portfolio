@@ -44,22 +44,24 @@ export default function Formation() {
         <div className="flex-grow">
           {diplomes.map((diplome, index) => (
             <div className="text-primary mb-16 mt-16" key={index}>
-              <div className="flex items-center">
+              <div className="flex items-center gap-3 max-w-2xl">
                 <img className="w-32 h-32 mr-4" src={diplome.logo} alt="Logo" />
                 <div>
                   <h4 className="font-bold text-lg">{diplome.date}</h4>
                   <h4 className="font-bold text-lg">{diplome.ecole}</h4>
                   <p className="text-lg ">{diplome.lieu}</p>
-                  <p className="">{diplome.description}</p>
+                  <p classname="text-sm leading-relaxed max-w-xs">
+                    {diplome.description}
+                  </p>
                   {diplome.skills && (
                     <div className="flex flex-wrap gap-2">
                       {diplome.skills.map((skill, idx) => (
-                        <span
+                        <div
                           key={idx}
-                          className="text-xs font-semibold text-blue-200 bg-blue-900/40 border border-blue-500/30 px-3 py-1 rounded-md"
+                          className="badge badge-outline badge-primary mt-2"
                         >
-                          #{skill}
-                        </span>
+                          {skill}
+                        </div>
                       ))}
                     </div>
                   )}

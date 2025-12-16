@@ -79,7 +79,7 @@ export const diplomes = [
     logo: "./images/Logo_IUT.png",
     description:
       "Parcours Réalisation d'Applications. Apprentissage du cycle complet de développement : de la conception (UML, Base de données) au déploiement, en passant par le développement Fullstack et la gestion de projet Agile.",
-    skills: ["Java", "React", "SQL", "Scrum", "CI/CD"],
+    skills: ["C", "Java", "SQL", "Scrum", "CI/CD"],
   },
   {
     date: "2022",
@@ -87,7 +87,7 @@ export const diplomes = [
     lieu: "Lycée-Notre dame du Kreisker",
     logo: "./images/lycee.png",
     description:
-      "Spécialités Mathématiques et Numérique & Sciences Informatiques (NSI). Obtention avec Mention Assez Bien.",
+      "Sciences Économiques et Sociales et Numérique & Sciences Informatiques (NSI). Obtention avec Mention Assez Bien.",
     skills: ["Python", "Algorithmique", "Logique"],
   },
 ];
@@ -103,6 +103,10 @@ export const experiences = [
     lieu: "Roscoff",
     technologie: ["node", "typescript", "playwright"],
     logo: "./images/bf.png",
+    taches: [
+      "Automatisation des audits d'accessibilité",
+      "Rédaction de documentation technique",
+    ],
   },
 ];
 
