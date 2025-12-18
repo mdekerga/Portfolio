@@ -9,19 +9,13 @@ export default function Accueil() {
         <h2 className="text-primary text-2xl font-bold">Développeur </h2>
         <h3 className="text-primary text-xl">(Web - Mobile - Jeux)</h3>
         <a
-          href="/files/MathieuDKCV.pdf"
+          href="/files/MathieudeKergariouCV.pdf"
           download="CV.pdf"
           className="btn btn-primary mt-12"
         >
           TELECHARGER MON CV
         </a>
       </div>
-      <a
-        href="#header"
-        className="btn fixed right-12 bottom-8 text-xl z-10 bg-white text-black"
-      >
-        ↑
-      </a>
     </section>
   );
 }
