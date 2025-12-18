@@ -34,6 +34,110 @@ export default function Projets() {
     setSelectedProject(null);
   };
 
+  // Simple, reusable image carousel used for project cards and in the modal
+  function Carousel({
+    images = [],
+    className = "",
+    imgClassName = "",
+    altPrefix = "",
+  }) {
+    const [index, setIndex] = useState(0);
+    useEffect(() => setIndex(0), [images]);
+
+    const prev = (e) => {
+      e.stopPropagation();
+      setIndex((i) => (i - 1 + images.length) % images.length);
+    };
+    const next = (e) => {
+      e.stopPropagation();
+      setIndex((i) => (i + 1) % images.length);
+    };
+
+    if (!images || images.length === 0) return null;
+
+    return (
+      <div
+        className={`relative ${className}`}
+        role="region"
+        aria-label={`${altPrefix} carousel`}
+        tabIndex={0}
+      >
+        <img
+          src={images[index]}
+          alt={`${altPrefix} - ${index + 1}`}
+          className={imgClassName}
+        />
+
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={prev}
+              aria-label="Previous image"
+              className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 flex items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                focusable="false"
+                className="stroke-current"
+              >
+                <path
+                  d="M15 18l-6-6 6-6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={next}
+              aria-label="Next image"
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 flex items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                focusable="false"
+                className="stroke-current"
+              >
+                <path
+                  d="M9 6l6 6-6 6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIndex(i);
+                  }}
+                  aria-label={`Go to image ${i + 1}`}
+                  className={`w-2 h-2 rounded-full ${
+                    i === index ? "bg-white" : "bg-white/50"
+                  }`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    );
+  }
+
   return (
     <section
       id="projets"
@@ -74,10 +178,11 @@ export default function Projets() {
             className="p-4 card bg-base-100 w-100 shadow-xl cursor-pointer hover:scale-105 transition-transform duration-200"
           >
             <figure>
-              <img
-                src={projet.image}
-                alt={projet.title}
-                className="w-full h-80 object-cover"
+              <Carousel
+                images={projet.images || [projet.image]}
+                altPrefix={projet.title}
+                className="rounded-xl overflow-hidden"
+                imgClassName="w-full h-80 object-cover"
               />
             </figure>
             <div className="card-body">
@@ -110,10 +215,11 @@ export default function Projets() {
             </h3>
 
             <div className="flex flex-col lg:flex-row gap-6">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="rounded-xl lg:w-1/2 object-cover max-h-[400px]"
+              <Carousel
+                images={selectedProject.images || [selectedProject.image]}
+                altPrefix={selectedProject.title}
+                className="lg:w-1/2"
+                imgClassName="rounded-xl lg:w-full object-cover max-h-[400px]"
               />
 
               <div className="flex flex-col gap-4">

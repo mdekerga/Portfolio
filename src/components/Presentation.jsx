@@ -41,7 +41,7 @@ export default function Presentation() {
       <div className="container flex mt-6">
         <div className="avatar">
           <div className="w-96 rounded">
-            <img src="./images/113.jpg" alt="Developer's Avatar" />
+            <img src="/images/113.jpg" alt="Developer's Avatar" />
           </div>
         </div>
 
