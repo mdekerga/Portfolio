@@ -5,8 +5,13 @@ export const projects = [
     description:
       "Conception et développement d'une plateforme de location saisonnier pour une association.",
     image: "/images/projet1/project-1.png",
-    images: ["/images/projet1/project-1.png"],
-    link: "https://github.com/mdekerga/KOH_Sport",
+    images: [
+      "/images/projet1/project-1.png",
+      "/images/projet1/projet1_1.png",
+      "/images/projet1/projet1_2.png",
+      "/images/projet1/projet1_3.png",
+    ],
+    link: "https://github.com/mdekerga/Alhaiz-Breizh",
     universitaire: true,
   },
   {
@@ -17,6 +22,15 @@ export const projects = [
     image: "/images/projet7/muse.png",
     images: ["/images/projet7/muse.png"],
     link: "https://github.com/mdekerga/",
+    universitaire: true,
+  },
+  {
+    title: "Anime Predictor",
+    technologie: ["PYTHON", "TKINTER", "PANDAS"],
+    description: "Développement d'un prédicteur de note d'un anime",
+    image: "/images/projet7/muse.png",
+    images: ["/images/projet7/muse.png"],
+    link: "https://github.com/mdekerga/Anime",
     universitaire: true,
   },
   {
