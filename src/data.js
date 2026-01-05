@@ -25,15 +25,6 @@ export const projects = [
     universitaire: true,
   },
   {
-    title: "Anime Predictor",
-    technologie: ["PYTHON", "TKINTER", "PANDAS"],
-    description: "Développement d'un prédicteur de note d'un anime",
-    image: "/images/projet7/muse.png",
-    images: ["/images/projet7/muse.png"],
-    link: "https://github.com/mdekerga/Anime",
-    universitaire: true,
-  },
-  {
     title: "Pokedex",
     technologie: ["HTML", "CSS", "JAVASCRIPT"],
     description: "Pokédex utilisant du Javascript, HTML et CSS",
@@ -90,6 +81,16 @@ export const projects = [
     images: ["/images/projet8/kelfilm.png"],
     link: "https://github.com/mdekerga/kelfilm",
     universitaire: false,
+  },
+  {
+    title: "Anime Predictor",
+    technologie: ["PYTHON", "TKINTER", "PANDAS"],
+    description:
+      "Développement d'un prédicteur de note d'un anime selon différents critères",
+    image: "/images/projet9/projet9_1.png",
+    images: ["/images/projet9/projet9_1.png", "/images/projet9/projet9_2.png"],
+    link: "https://github.com/mdekerga/Anime",
+    universitaire: true,
   },
 ];
 
