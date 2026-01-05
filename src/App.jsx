@@ -7,6 +7,7 @@ import Formation from "./components/Formation";
 import Accueil from "./components/Accueil";
 import Experiences from "./components/Experiences";
 import CompetencesBUT from "./components/CompetencesBUT";
+
 import Contact from "./components/Contact";
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
         <div className="w-full bg-section-dark flex justify-center">
           <Competences />
         </div>
+
         <div className="w-full bg-section-dark flex justify-center">
           <Projets />
         </div>

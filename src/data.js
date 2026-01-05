@@ -167,3 +167,4 @@ export const skills = {
   FRAMEWORK: ["DJANGO", "REACT", "LARAVEL", "SPRING"],
   OUTILS: ["VSC", "DOCKER", "GITHUB"],
 };
+
