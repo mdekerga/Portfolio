@@ -45,7 +45,7 @@ export const projects = [
     image: "/images/projet2/project-2.png",
     images: ["/images/projet2/project-2.png"],
     link: "https://github.com/mdekerga/Actu-Finances",
-    universitaire: true,
+    universitaire: false,
   },
   {
     title: "Puissance 4",
