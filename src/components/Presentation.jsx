@@ -37,7 +37,9 @@ export default function Presentation() {
         isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
       }`}
     >
-      <h2 className="text-primary text-4xl font-bold mb-6">Présentation</h2>
+      <h2 className="font-title tracking-wide text-7xl font-bold mb-6">
+        PRÉSENTATION
+      </h2>
       <div className="container flex mt-6">
         <div className="avatar">
           <div className="w-96 rounded">

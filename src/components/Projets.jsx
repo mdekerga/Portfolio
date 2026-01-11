@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom"; // 1. Importer createPortal
 import { projects } from "../data";
 
-
 function Carousel({
   images = [],
   className = "",
@@ -124,7 +123,9 @@ export default function Projets() {
           isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
         }`}
       >
-        <h2 className="text-primary text-4xl font-bold mb-6">Projets</h2>
+        <h2 className="font-title tracking-wide text-7xl font-bold mb-6">
+          PROJETS
+        </h2>
 
         <div className="mb-6 flex flex-row flex-wrap justify-center gap-2">
           <button
@@ -163,7 +164,9 @@ export default function Projets() {
                 />
               </figure>
               <div className="card-body">
-                <h3 className="text-primary card-title">{projet.title}</h3>
+                <h3 className="font-title text-4xl card-title">
+                  {projet.title}
+                </h3>
                 <div className="flex flex-row flex-wrap gap-2">
                   {projet.technologie.map((techno, idx) => (
                     <div
@@ -177,12 +180,29 @@ export default function Projets() {
                 <p className="text-primary line-clamp-3">
                   {projet.description}
                 </p>
+                {projet.universitaire && projet.competences && (
+                  <div className="mt-4 border-t border-gray-100 pt-3">
+                    <p className="text-m font-bold text-gray-500 mb-2 uppercase tracking-wide">
+                      Compétences BUT validées :
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {projet.competences.map((comp, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 text-s font-medium  rounded-md"
+                        >
+                          {comp}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
       </section>
-
 
       {selectedProject &&
         createPortal(
@@ -225,6 +245,26 @@ export default function Projets() {
                     {selectedProject.description}
                   </p>
 
+                  {selectedProject.universitaire &&
+                    selectedProject.competences && (
+                      <div className="mt-4 border-t border-gray-100 pt-3">
+                        <p className="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">
+                          Compétences BUT validées :
+                        </p>
+
+                        <div className="flex flex-wrap gap-2">
+                          {selectedProject.competences.map((comp, index) => (
+                            <span
+                              key={index}
+                              className="px-2 py-1 text-s font-medium rounded-md "
+                            >
+                              {comp}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                   <div className="modal-action mt-auto">
                     {selectedProject.link && (
                       <a
@@ -233,7 +273,17 @@ export default function Projets() {
                         rel="noopener noreferrer"
                         className="btn btn-primary"
                       >
-                        Voir le Code / Site
+                        CODE
+                      </a>
+                    )}
+                    {selectedProject.demo && (
+                      <a
+                        href={selectedProject.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary"
+                      >
+                        DEMO
                       </a>
                     )}
                     <button className="btn" onClick={closeDetails}>
@@ -244,14 +294,13 @@ export default function Projets() {
               </div>
             </div>
 
-            {/* Backdrop */}
             <form method="dialog" className="modal-backdrop">
               <button onClick={closeDetails} type="button">
                 close
               </button>
             </form>
           </dialog>,
-          document.body 
+          document.body
         )}
     </>
   );

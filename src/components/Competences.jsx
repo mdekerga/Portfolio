@@ -31,15 +31,15 @@ export default function CompetencesCloud() {
   }, []);
   return (
     <section
-      id="Competences"
+      id="competences"
       ref={sectionRef}
       className={`py-8 flex flex-col items-center mt-24 mb-24 ${
         isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
       }`}
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl font-bold mb-16 text-center bg-clip-text">
-          Compétences
+        <h2 className="font-title tracking-wide text-7xl font-bold mb-16 text-center bg-clip-text">
+          COMPÉTENCES
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -48,7 +48,7 @@ export default function CompetencesCloud() {
               key={category}
               className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-lg hover:border-white/20 transition-colors"
             >
-              <h3 className="text-xl font-bold mb-6  border-b border-white/10 pb-2 inline-block">
+              <h3 className="text-4xl font-title font-bold mb-6  border-b border-white/10 pb-2 inline-block">
                 {category}
               </h3>
 

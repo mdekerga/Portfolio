@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 items-start">
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold mb-2">Mathieu de Kergariou</h3>
-            <p className="text-sm text-gray-600">Developpeur Web · Portfolio</p>
+            <p className="text-sm">Developpeur Web · Portfolio</p>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="mt-4 inline-flex items-center gap-2 px-3 py-2 rounded-md bg-primary text-white hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
@@ -136,7 +136,7 @@ export default function Footer() {
                   <ellipse
                     cx="1245.2"
                     cy="1243.4"
-                    fill="#fff"
+                    fill="#000000"
                     rx="1217.6"
                     ry="1246.5"
                   />
@@ -149,7 +149,7 @@ export default function Footer() {
 
         <hr className="my-6 border-t border-gray-200" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-gray-600">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-sm ">
           <p>© {new Date().getFullYear()} Mathieu de Kergariou</p>
           <p>
             Conçu avec{" "}

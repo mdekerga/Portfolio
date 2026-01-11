@@ -38,12 +38,14 @@ export default function Experiences() {
         isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
       }`}
     >
-      <h2 className="text-primary text-4xl font-bold mb-6"> Experiences </h2>
+      <h2 className="font-title tracking-wide text-7xl font-bold mb-6">
+        EXPÉRIENCES
+      </h2>
 
       <div className="flex flex-col lg:flex-row justify-center">
         <div className="flex-grow">
           {experiences.map((experience, index) => (
-            <div className="text-primary mb-16 mt-16" key={index}>
+            <div className="mb-16 mt-16" key={index}>
               <div className="flex items-center">
                 <img
                   className="w-32 h-32 mr-8"

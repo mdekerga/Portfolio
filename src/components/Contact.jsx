@@ -104,7 +104,9 @@ export default function Contact() {
         isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
       }`}
     >
-      <h2 className="text-primary text-4xl font-bold mb-6">Contact</h2>
+      <h2 className="font-title tracking-wide text-7xl font-bold mb-6">
+        CONTACT
+      </h2>
 
       <div className="container mx-auto w-full">
         <form

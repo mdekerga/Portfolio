@@ -38,19 +38,21 @@ export default function Formation() {
         isVisible ? "opacity-100 animate-fade-in-down" : "opacity-0"
       }`}
     >
-      <h2 className="text-primary text-4xl font-bold mb-6"> Formation </h2>
+      <h2 className="font-title tracking-wide text-7xl font-bold mb-6">
+        FORMATION
+      </h2>
 
       <div className="flex flex-col lg:flex-row justify-center">
         <div className="flex-grow">
           {diplomes.map((diplome, index) => (
-            <div className="text-primary mb-16 mt-16" key={index}>
+            <div className="mb-16 mt-16" key={index}>
               <div className="flex items-center gap-3 max-w-2xl">
                 <img className="w-32 h-32 mr-4" src={diplome.logo} alt="Logo" />
                 <div>
                   <h4 className="font-bold text-lg">{diplome.date}</h4>
                   <h4 className="font-bold text-lg">{diplome.ecole}</h4>
-                  <p className="text-lg ">{diplome.lieu}</p>
-                  <p classname="text-sm leading-relaxed max-w-xs">
+                  <p className="text-lg text-primary">{diplome.lieu}</p>
+                  <p classname="text-sm text-primary leading-relaxed max-w-xs">
                     {diplome.description}
                   </p>
                   {diplome.skills && (

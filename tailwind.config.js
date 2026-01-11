@@ -5,6 +5,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["PoliceTexte", "sans-serif"],
+
+        title: ["PoliceTitre", "sans-serif"],
+      },
       colors: {
         "base-content-light": "#FF9E9E",
       },

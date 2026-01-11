@@ -13,6 +13,7 @@ export const projects = [
     ],
     link: "https://github.com/mdekerga/Alhaiz-Breizh",
     universitaire: true,
+    competences: ["Réaliser", "Administrer", "Gérer", "Conduire", "Collaborer"],
   },
   {
     title: "Système de recommandation de musique",
@@ -23,6 +24,7 @@ export const projects = [
     images: ["/images/projet7/muse.png"],
     link: "https://github.com/mdekerga/",
     universitaire: true,
+    competences: ["Gérer", "Conduire", "Collaborer"],
   },
   {
     title: "Pokedex",
@@ -32,6 +34,7 @@ export const projects = [
     images: ["/images/projet6/pokedex.png"],
     link: "https://github.com/mdekerga/Pokedex-JS",
     universitaire: true,
+    competences: ["Réaliser"],
   },
 
   {
@@ -53,6 +56,7 @@ export const projects = [
     images: ["/images/projet3/project-3.png"],
     link: "https://github.com/mdekerga/Puissance4",
     universitaire: true,
+    competences: ["Realiser", "Optimiser"],
   },
   {
     title: "Portfolio",
@@ -61,6 +65,7 @@ export const projects = [
     image: "/images/projet4/project-4.png",
     images: ["/images/projet4/project-4.png"],
     link: "https://github.com/mdekerga/Portfolio",
+    demo: "https://mathieudk.netlify.app/",
     universitaire: false,
   },
   {
@@ -91,6 +96,7 @@ export const projects = [
     images: ["/images/projet9/projet9_1.png", "/images/projet9/projet9_2.png"],
     link: "https://github.com/mdekerga/Anime",
     universitaire: true,
+    competences: ["Gérer"],
   },
 ];
 
@@ -127,36 +133,10 @@ export const experiences = [
     technologie: ["node", "typescript", "playwright"],
     logo: "/images/bf.png",
     taches: [
-      "Automatisation des audits d'accessibilité",
+      "Développement d'un outil qui reléve les erreurs d'accessibilités",
+      "Intégration dans une pipeline afin d'automatiser l'outil",
       "Rédaction de documentation technique",
     ],
-  },
-];
-
-export const skillsBUT = [
-  {
-    Titre: "Compétence 1",
-    label: "Réaliser",
-  },
-  {
-    Titre: "Compétence 2",
-    label: "Optimiser",
-  },
-  {
-    Titre: "Compétence 3",
-    label: "Administrer",
-  },
-  {
-    Titre: "Compétence 4",
-    label: "Gérer",
-  },
-  {
-    Titre: "Compétence 5",
-    label: "Cnduire",
-  },
-  {
-    Titre: "Compétence 6",
-    label: "Collaborer",
   },
 ];
 
@@ -165,6 +145,5 @@ export const skills = {
   BACKEND: ["PHP", "POSTGRESQL", "MONGODB"],
   PROGRAMMATION: ["C++", "JAVA", "PYTHON"],
   FRAMEWORK: ["DJANGO", "REACT", "LARAVEL", "SPRING"],
-  OUTILS: ["VSC", "DOCKER", "GITHUB"],
+  OUTILS: ["VSC", "DOCKER", "GITHUB", "FIGMA"],
 };
-

@@ -1,9 +1,9 @@
 export default function Header() {
   return (
     <header id="header">
-      <div className="navbar bg-base-100 z-10 fixed ">
+      <div className="navbar z-50 fixed  ">
         <div className="flex-1">
-          <a className="text-primary text-xl">MDK</a>
+          <a className="text-primary text-xl">Mathieu de Kergariou</a>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">

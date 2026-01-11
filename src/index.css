@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "PoliceTitre";
+  src: url("./fonts/FKScreamerBlack.otf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "PoliceTexte";
+  src: url("./fonts/NeueHaasDisplayRoman.ttf") format("truetype");
+  font-weight: 400;
+}
