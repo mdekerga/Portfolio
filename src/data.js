@@ -79,15 +79,6 @@ export const projects = [
     universitaire: false,
   },
   {
-    title: "Kelfilm",
-    technologie: ["Angular"],
-    description: "",
-    image: "/images/projet8/kelfilm.png",
-    images: ["/images/projet8/kelfilm.png"],
-    link: "https://github.com/mdekerga/kelfilm",
-    universitaire: false,
-  },
-  {
     title: "Anime Predictor",
     technologie: ["PYTHON", "TKINTER", "PANDAS"],
     description:
