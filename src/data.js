@@ -138,3 +138,36 @@ export const skills = {
   FRAMEWORK: ["DJANGO", "REACT", "LARAVEL", "SPRING"],
   OUTILS: ["VSC", "DOCKER", "GITHUB", "FIGMA"],
 };
+
+export const butSkills = [
+  {
+    nom: "Réaliser",
+    description:
+      "Concevoir, coder et tester des applications informatiques adaptées aux besoins des utilisateurs.",
+  },
+  {
+    nom: "Optimiser",
+    description:
+      "Améliorer les performances des programmes en choisissant les structures de données et algorithmes appropriés.",
+  },
+  {
+    nom: "Administrer",
+    description:
+      "Installer, configurer et sécuriser des systèmes, des réseaux et des environnements de déploiement.",
+  },
+  {
+    nom: "Gérer",
+    description:
+      "Concevoir et exploiter des bases de données pour assurer la disponibilité et la cohérence des informations.",
+  },
+  {
+    nom: "Conduire",
+    description:
+      "Gérer le cycle de vie d'un projet informatique en travaillant efficacement en équipe pour répondre aux besoins clients.",
+  },
+  {
+    nom: "Collaborer",
+    description:
+      "Travailler efficacement en équipe informatique, communiquer avec les parties prenantes et s'adapter à l'environnement professionnel",
+  },
+];
