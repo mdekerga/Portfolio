@@ -70,7 +70,7 @@ export default function CompetencesCloud() {
           ))}
 
           <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-lg transition-colors backdrop-blur-lg hover:border-white/20 relative overflow-visible">
-            <h3 className="text-4xl font-title font-bold mb-6 pb-2 inline-block">
+            <h3 className="text-4xl font-title font-bold mb-6 pb-2 border-b border-white/10 inline-block">
               Compétences BUT
             </h3>
 

@@ -19,7 +19,7 @@ export const projects = [
     title: "Système de recommandation de musique",
     technologie: ["POSTGRESQL", "PYTHON", "IA"],
     description:
-      "Conception et développement d'une plateforme de location saisonnier pour une association.",
+      "Projet en cours d'un système pour recommander des musiques selon les goûts d'un utilisateur ou sa proximité avec d'autre utilisateur",
     image: "/images/projet7/muse.png",
     images: ["/images/projet7/muse.png"],
     link: "https://github.com/mdekerga/",
