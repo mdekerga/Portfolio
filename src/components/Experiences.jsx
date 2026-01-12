@@ -58,8 +58,8 @@ export default function Experiences() {
                   </h4>
                   <h4 className="font-bold text-lg">{experience.emploi}</h4>
                   <h4 className="font-bold text-lg">{experience.entreprise}</h4>
-                  <p className="text-lg ">{experience.lieu}</p>
-                  <p className="text-lg">{experience.description}</p>
+                  <p className="text-lg text-primary">{experience.lieu}</p>
+                  <p className="text-m">{experience.description}</p>
                   <ul className="list-disc">
                     {experience.taches.map((tache, id) => (
                       <li>{tache}</li>

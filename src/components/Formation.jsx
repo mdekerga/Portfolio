@@ -52,7 +52,7 @@ export default function Formation() {
                   <h4 className="font-bold text-lg">{diplome.date}</h4>
                   <h4 className="font-bold text-lg">{diplome.ecole}</h4>
                   <p className="text-lg text-primary">{diplome.lieu}</p>
-                  <p classname="text-sm text-primary leading-relaxed max-w-xs">
+                  <p classname="text-m text-primary leading-relaxed max-w-xs">
                     {diplome.description}
                   </p>
                   {diplome.skills && (
