@@ -4,13 +4,19 @@ export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  // 'bot-field' pour le honeypot Netlify
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+    "bot-field": "",
+  });
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  // Optional Formspree endpoint via Vite env: VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/<your-id>
   const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || null;
+  const NETLIFY = import.meta.env.VITE_NETLIFY === "true";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,11 +52,22 @@ export default function Contact() {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault();
+    const isNetlify = NETLIFY;
+
+    // Validation côté client
     const errs = validate(form);
     setErrors(errs);
-    if (Object.keys(errs).length) return;
+    if (Object.keys(errs).length) {
+      if (isNetlify) e.preventDefault();
+      return;
+    }
 
+    if (isNetlify) {
+      setSubmitting(true);
+      return;
+    }
+
+    e.preventDefault();
     setSubmitting(true);
 
     if (FORMSPREE_ENDPOINT) {
@@ -73,7 +90,7 @@ export default function Contact() {
           });
         } else {
           setSuccess(true);
-          setForm({ name: "", email: "", message: "" });
+          setForm({ name: "", email: "", message: "", "bot-field": "" });
         }
       } catch (err) {
         setErrors({ form: "Erreur réseau, réessayez." });
@@ -86,7 +103,7 @@ export default function Contact() {
       try {
         await new Promise((r) => setTimeout(r, 900));
         setSuccess(true);
-        setForm({ name: "", email: "", message: "" });
+        setForm({ name: "", email: "", message: "", "bot-field": "" });
       } catch (err) {
         setErrors({ form: "Impossible d'envoyer le message. Réessayez." });
       } finally {
@@ -112,13 +129,34 @@ export default function Contact() {
         <form
           onSubmit={handleSubmit}
           className="card bg-base-100 shadow-xl p-6"
+          name={NETLIFY ? "contact" : undefined}
+          method={NETLIFY ? "POST" : undefined}
+          data-netlify={NETLIFY ? "true" : undefined}
+          data-netlify-honeypot={NETLIFY ? "bot-field" : undefined}
         >
-          {!FORMSPREE_ENDPOINT && (
+          {!FORMSPREE_ENDPOINT && !NETLIFY && (
             <div className="mb-4 text-sm text-neutral">
               Formulaire en mode simulation — configurez VITE_FORMSPREE_ENDPOINT
-              pour l’envoi réel.
+              pour l’envoi réel ou activez VITE_NETLIFY pour Netlify.
             </div>
           )}
+
+          {NETLIFY && (
+            <>
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden" aria-hidden="true">
+                <label>
+                  Ne pas remplir si vous êtes humain{" "}
+                  <input
+                    name="bot-field"
+                    value={form["bot-field"]}
+                    onChange={handleChange}
+                  />
+                </label>
+              </p>
+            </>
+          )}
+
           {errors.form && (
             <div className="alert alert-error mb-4">{errors.form}</div>
           )}
