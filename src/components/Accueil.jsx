@@ -11,7 +11,7 @@ export default function Accueil() {
         <a
           href="/files/MathieudeKergariouCV.pdf"
           download="CV.pdf"
-          className="btn btn-primary mt-12"
+          className="btn bg-white text-black hover:text-white mt-12"
         >
           TELECHARGER MON CV
         </a>
