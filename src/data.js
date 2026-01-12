@@ -89,6 +89,21 @@ export const projects = [
     universitaire: true,
     competences: ["Gérer"],
   },
+  {
+    title: "API de gestion de Personnel",
+    technologie: ["Spring", "HTML", "d3.js"],
+    description:
+      "Conception d'une API avec Spring Boot pour l'administration du personnel, couplée à D3.js pour la visualisation.",
+    image: "/images/projet3/project10_1.png",
+    images: [
+      "/images/projet3/project10_1.png",
+      "/images/projet3/project10_2.png",
+      "/images/projet3/project10_3.png",
+    ],
+    link: "https://github.com/mdekerga/collaborateurs",
+    universitaire: true,
+    competences: ["Gérer"],
+  },
 ];
 
 export const diplomes = [
