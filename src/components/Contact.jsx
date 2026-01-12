@@ -1,10 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 
+// Fonction utilitaire pour encoder les données pour Netlify
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  // 'bot-field' pour le honeypot Netlify
+  // 'bot-field' est le champ piège (honeypot)
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -16,6 +23,7 @@ export default function Contact() {
   const [success, setSuccess] = useState(false);
 
   const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || null;
+  // On s'assure que NETLIFY est bien un booléen
   const NETLIFY = import.meta.env.VITE_NETLIFY === "true";
 
   useEffect(() => {
@@ -52,24 +60,41 @@ export default function Contact() {
   }
 
   async function handleSubmit(e) {
-    const isNetlify = NETLIFY;
+    e.preventDefault(); // Empêche TOUJOURS le rechargement
 
-    // Validation côté client
+    // Validation
     const errs = validate(form);
     setErrors(errs);
-    if (Object.keys(errs).length) {
-      if (isNetlify) e.preventDefault();
-      return;
-    }
+    if (Object.keys(errs).length) return;
 
-    if (isNetlify) {
-      setSubmitting(true);
-      return;
-    }
-
-    e.preventDefault();
     setSubmitting(true);
 
+    // --- LOGIQUE NETLIFY ---
+    if (NETLIFY) {
+      try {
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({
+            "form-name": "contact", // Doit correspondre à l'attribut name du form
+            ...form,
+          }),
+        });
+
+        // Succès Netlify
+        setSuccess(true);
+        setForm({ name: "", email: "", message: "", "bot-field": "" });
+      } catch (error) {
+        setErrors({ form: "Erreur d'envoi (Netlify). Réessayez plus tard." });
+        console.error(error);
+      } finally {
+        setSubmitting(false);
+        setTimeout(() => setSuccess(false), 3500);
+      }
+      return; // Fin du traitement pour Netlify
+    }
+
+    // --- LOGIQUE FORMSPREE ---
     if (FORMSPREE_ENDPOINT) {
       try {
         const resp = await fetch(FORMSPREE_ENDPOINT, {
@@ -99,13 +124,13 @@ export default function Contact() {
         setTimeout(() => setSuccess(false), 3500);
       }
     } else {
-      // Fallback (simulated send)
+      // --- MODE SIMULATION (Fallback) ---
       try {
         await new Promise((r) => setTimeout(r, 900));
         setSuccess(true);
         setForm({ name: "", email: "", message: "", "bot-field": "" });
       } catch (err) {
-        setErrors({ form: "Impossible d'envoyer le message. Réessayez." });
+        setErrors({ form: "Impossible d'envoyer le message." });
       } finally {
         setSubmitting(false);
         setTimeout(() => setSuccess(false), 3500);
@@ -126,35 +151,33 @@ export default function Contact() {
       </h2>
 
       <div className="container mx-auto w-full">
+        {/* L'attribut onSubmit gère tout via JS */}
         <form
           onSubmit={handleSubmit}
           className="card bg-base-100 shadow-xl p-6"
-          name={NETLIFY ? "contact" : undefined}
-          method={NETLIFY ? "POST" : undefined}
-          data-netlify={NETLIFY ? "true" : undefined}
-          data-netlify-honeypot={NETLIFY ? "bot-field" : undefined}
         >
           {!FORMSPREE_ENDPOINT && !NETLIFY && (
             <div className="mb-4 text-sm text-neutral">
-              Formulaire en mode simulation — configurez VITE_FORMSPREE_ENDPOINT
-              pour l’envoi réel ou activez VITE_NETLIFY pour Netlify.
+              Mode simulation. Configurez VITE_NETLIFY="true" ou ajoutez un
+              endpoint Formspree.
             </div>
           )}
 
+          {/* Champ caché nécessaire pour l'envoi AJAX Netlify */}
+          {NETLIFY && <input type="hidden" name="form-name" value="contact" />}
+
+          {/* HONEYPOT : Champ piège pour les bots */}
           {NETLIFY && (
-            <>
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden" aria-hidden="true">
-                <label>
-                  Ne pas remplir si vous êtes humain{" "}
-                  <input
-                    name="bot-field"
-                    value={form["bot-field"]}
-                    onChange={handleChange}
-                  />
-                </label>
-              </p>
-            </>
+            <p className="hidden" aria-hidden="true">
+              <label>
+                Ne pas remplir si vous êtes humain{" "}
+                <input
+                  name="bot-field"
+                  value={form["bot-field"]}
+                  onChange={handleChange}
+                />
+              </label>
+            </p>
           )}
 
           {errors.form && (
