@@ -79,6 +79,17 @@ export const projects = [
     universitaire: false,
   },
   {
+    title: "JobTracker",
+    technologie: ["Vue.js", "PostgreSQL", "Tailwind"],
+    description:
+      "Conception et déploiement d'une application pour centraliser et gérer le suivi des recherches de stage.",
+    image: "/images/projet5/project-5.jpeg",
+    images: ["/images/projet11/projet11_1.png"],
+    link: "https://github.com/mdekerga/job-tracker",
+    demo: "https://mdekerga-jobtracker.vercel.app/",
+    universitaire: false,
+  },
+  {
     title: "Anime Predictor",
     technologie: ["PYTHON", "TKINTER", "PANDAS"],
     description:

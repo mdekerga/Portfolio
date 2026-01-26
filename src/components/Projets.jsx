@@ -90,7 +90,7 @@ export default function Projets() {
           observer.unobserve(sectionRef.current);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -278,7 +278,7 @@ export default function Projets() {
                     )}
                     {selectedProject.demo && (
                       <a
-                        href={selectedProject.link}
+                        href={selectedProject.demo}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-primary"
@@ -300,7 +300,7 @@ export default function Projets() {
               </button>
             </form>
           </dialog>,
-          document.body
+          document.body,
         )}
     </>
   );
